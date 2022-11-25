@@ -7,7 +7,7 @@ import styles from './Header.module.scss';
 import Tippy from '@tippyjs/react/headless';
 import { useEffect, useState } from 'react';
 import AccountItem from '~/components/AccountItem';
-
+import Button from '~/components/Button';
 const cx = classNames.bind(styles);
 
 function Header() {
@@ -51,7 +51,10 @@ function Header() {
             </button>
           </div>
         </Tippy>
-        <div className={cx('actions')}></div>
+        <div className={cx('actions')}>
+          <Button text>Upload</Button>
+          <Button primary>Login</Button>
+        </div>
       </div>
     </header>
   );
